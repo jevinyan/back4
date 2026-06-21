@@ -1,8 +1,6 @@
 FROM alpine:3.20
 
-RUN apk add --no-cache wget tar && \
-    addgroup -g 1000 -S appgroup && \
-    adduser -u 1000 -S appuser -G appgroup
+RUN apk add --no-cache wget tar
 
 WORKDIR /app
 
@@ -17,8 +15,6 @@ RUN wget https://github.com/SagerNet/sing-box/releases/download/v${SING_BOX_VERS
     && apk del wget tar
 
 COPY config.json .
-
-USER appuser
 
 EXPOSE 8080 8081
 CMD ["./sing-box", "run", "-c", "config.json"]
