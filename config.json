@@ -13,9 +13,8 @@
       "sniff_override_destination": true,
       "users": [
         {
-          "uuid": "b4e164e9-3b54-4e65-a625-f13b41bda5ad",
-          "name": "user1",
-          "flow": ""
+          "uuid": "c362a4d4-c344-4887-ac87-ea9816de681d",
+          "name": "user1"
         }
       ],
       "transport": {
@@ -26,27 +25,10 @@
       }
     }
   ],
-"outbounds": [
+  "outbounds": [
     {
       "type": "direct",
       "tag": "direct"
     }
-  ],
-  "route": {
-    "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      }
-    ],
-    "auto_detect_interface": true
-  },
-  "dns": {
-    "servers": [
-      {
-        "tag": "google",
-        "address": "8.8.8.8"
-      }
-    ]
-  }
+  ]
 }
